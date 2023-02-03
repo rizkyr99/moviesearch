@@ -1,0 +1,62 @@
+.movielist__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.pagination {
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.pagination__button {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-color: #19283f;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.pagination__button-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.pagination__page {
+  color: #fff;
+  width: 100px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .movielist__container {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .movielist__container {
+    place-content: center;
+    grid-template-columns: repeat(3, minmax(150px, 250px));
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .movielist__container {
+    place-content: center;
+    grid-template-columns: repeat(2, minmax(150px, 200px));
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .movielist__container {
+    place-content: center;
+    grid-template-columns: minmax(150px, 250px);
+  }
+}
